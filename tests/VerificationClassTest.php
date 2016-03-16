@@ -1,6 +1,6 @@
 <?php
 
-require_once '../VerificationClass.php';
+require_once '../Verification/VerificationClass.php';
 
 class VerificationClassTest extends PHPUnit_Framework_TestCase {
 
