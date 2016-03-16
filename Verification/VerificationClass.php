@@ -61,11 +61,11 @@ class VerificationClass {
 		if (is_array($value) === true) {
 			return 'array';
 		}
-		return 'null';
+		return 'other';
 	}
 	
 	/**
-	 * fizBuzzする関数
+	 * fizzBuzzする関数
 	 * 3で割り切れる場合はfiz
 	 * 5で割り切れる場合あbuzz
 	 * 両方で割り切れる場合はfiz buzz
@@ -74,23 +74,28 @@ class VerificationClass {
 	 * 
 	 * @return なし
 	 */
-	public function fizBuzz($value = 30) {
-		$fizbuzz = '';
+	public function fizzBuzz($value = 30) {
+
+		// validation : integer型で無い場合はfalseを返す
+		if (!is_int($value)) {
+			return false;
+		}
+
+		$fizzbuzz = '';
 		for ($i=1; $i<=$value; $i++) {
 			if ($this->division($i, 3) === true) {
-				$fizbuzz .= 'fiz';
+				$fizzbuzz .= 'fiz';
 			}
 	
 			if ($this->division($i, 5) === true) {
-				$fizbuzz .= 'buzz';
+				$fizzbuzz .= 'buzz';
 			}
 
 			if (($this->division($i, 3) === false) && ($this->division($i, 5) === false)) {
-				$fizbuzz .= $i;
+				$fizzbuzz .= $i;
 			}
-			echo $fizbuzz. PHP_EOL;
-			// 変数初期化
-			$fizbuzz = '';
+			$fizzbuzz .= PHP_EOL;
 		}
+		return $fizzbuzz;
 	}
 }
