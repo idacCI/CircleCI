@@ -1,6 +1,7 @@
 <?php
 
-require_once '../Verification/VerificationClass.php';
+// PHPUNITが実行される場所がカレントディレクトリになるので要注意
+require_once './Verification/VerificationClass.php';
 
 class VerificationClassTest extends PHPUnit_Framework_TestCase {
 
