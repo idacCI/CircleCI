@@ -84,7 +84,7 @@ class VerificationClass {
 		$fizzbuzz = '';
 		for ($i=1; $i<=$value; $i++) {
 			if ($this->division($i, 3) === true) {
-				$fizzbuzz .= 'fiz';
+				$fizzbuzz .= 'fizz';
 			}
 	
 			if ($this->division($i, 5) === true) {
