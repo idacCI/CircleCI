@@ -5,6 +5,9 @@
     <testsuite name="Hoge">
         <directory>./</directory>
     </testsuite>
+    <testsuite name="VerificationClass">
+        <directory>./</directory>
+    </testsuite>
     <logging>
         <log type="coverage-clover" target="build/logs/clover.xml"/>
     </logging>
