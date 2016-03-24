@@ -54,7 +54,7 @@ class VerificationClassTest extends PHPUnit_Framework_TestCase {
 
 		// 引数が文字列型の場合は'string'の文字列が返却されてくる設計
 		$result = $this->VerificationClass->cheackType('TEST');
-		$this->assertEquals('string', $result);
+		$this->assertEquals('integre', $result);
 
 		// 引数が浮動型の場合は'float'の文字列が返却されてくる設計
 		$result = $this->VerificationClass->cheackType(1.01);
