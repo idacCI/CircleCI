@@ -8,7 +8,9 @@
 class Fuga {
 
     public function index() {
-        return true;
+        $i = 1;
+        if($i == 1)
+            return true;
     }
 
 }
