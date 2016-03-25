@@ -7,7 +7,7 @@ machine:
 dependencies:
   override:
     - mkdir -p build/logs
-    - composer install --dev --no-interaction
+    - composer install --no-interaction
     - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
 
 test:
@@ -15,3 +15,6 @@ test:
     - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
   post:
     - php vendor/bin/coveralls -v
+    - git diff --name-only origin/master | grep ".*.php$" | xargs phpcs --report=source --standard=./tests/phpcs.xml
+    - git diff --name-only origin/master | grep ".*.php$" | xargs phpcs --report=checkstyle --standard=./tests/phpcs.xml
+
