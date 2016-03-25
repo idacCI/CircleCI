@@ -11,6 +11,8 @@ class Fuga {
         $i = 1;
         if($i == 1)
             return true;
+        else
+            return false;
     }
 
 }
