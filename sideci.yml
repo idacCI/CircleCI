@@ -2,6 +2,7 @@ linter:
   code_sniffer:
     options:
       standard: PSR2
+      dir: Verification/
   phpmd:
     options:
       rule: cleancode,codesize,controversial,design,naming,unusedcode
