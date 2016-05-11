@@ -5,4 +5,4 @@ linter:
       dir: Verification/
   phpmd:
     options:
-      rule: cleancode,codesize,controversial,design,naming,unusedcode
+      rule: phpmd.xml
